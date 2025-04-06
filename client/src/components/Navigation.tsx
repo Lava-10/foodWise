@@ -25,12 +25,12 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-ocean-100 z-50">
+    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-green-100 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-ocean-600">
+              <span className="text-2xl font-bold text-green-600">
                 foodWise
               </span>
             </Link>
@@ -44,8 +44,8 @@ const Navigation = () => {
                 to={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? "bg-ocean-100 text-ocean-600"
-                    : "text-gray-600 hover:bg-ocean-50"
+                    ? "bg-green-100 text-green-600"
+                    : "text-gray-600 hover:bg-green-50"
                 }`}
               >
                 {link.label}
@@ -92,8 +92,8 @@ const Navigation = () => {
                 to={link.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive(link.href)
-                    ? "bg-ocean-100 text-ocean-600"
-                    : "text-gray-600 hover:bg-ocean-50"
+                    ? "bg-green-100 text-green-600"
+                    : "text-gray-600 hover:bg-green-50"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -106,14 +106,14 @@ const Navigation = () => {
                   handleLogout();
                   setIsOpen(false);
                 }}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-ocean-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50"
               >
                 Logout
               </button>
             ) : (
               <Link
                 to="/login"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-ocean-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50"
                 onClick={() => setIsOpen(false)}
               >
                 Login

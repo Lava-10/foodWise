@@ -43,7 +43,7 @@ const AiEducator = () => {
   ];
 
   const nextTip = () => {
-    setCurrentTip((prev) => (prev + 1) % waterTips.length);
+    setCurrentTip((prev) => (prev + 1) % foodTips.length);
   };
 
   return (
@@ -66,8 +66,8 @@ const AiEducator = () => {
         </div>
 
         <Card className="p-6 mb-8 bg-gradient-to-br from-ocean-50 to-white">
-          <h3 className="text-xl font-semibold mb-4 text-ocean-800">{waterTips[currentTip].title}</h3>
-          <p className="text-ocean-700 mb-6">{waterTips[currentTip].content}</p>
+          <h3 className="text-xl font-semibold mb-4 text-ocean-800">{foodTips[currentTip].title}</h3>
+          <p className="text-ocean-700 mb-6">{foodTips[currentTip].content}</p>
           <Button onClick={nextTip} className="w-full sm:w-auto">
             Next Tip
           </Button>

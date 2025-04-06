@@ -10,7 +10,7 @@ const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
-      text: "Hi! I'm chefBot. How can I help you learn about Food conservation?",
+      text: "Hi! I'm NutriBot. How can I help you learn about Food conservation?",
       isBot: true,
     },
   ]);
@@ -49,8 +49,8 @@ const ChatBot = () => {
 
   return (
     <Card className="fixed bottom-4 right-4 w-96 h-[75%] flex flex-col shadow-xl">
-      <div className="p-4 bg-ocean-500 text-white flex justify-between items-center rounded-t-lg">
-        <h3 className="font-semibold">chefBot</h3>
+      <div className="p-4 bg-green-500 text-white flex justify-between items-center rounded-t-lg">
+        <h3 className="font-semibold">NutriBot</h3>
         <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
           <X className="w-4 h-4" />
         </Button>
@@ -67,8 +67,8 @@ const ChatBot = () => {
             <div
               className={`max-w-[80%] p-2 rounded-lg ${
                 message.isBot
-                  ? "bg-ocean-100 text-ocean-900"
-                  : "bg-ocean-500 text-white"
+                  ? "bg-green-100 text-green-900"
+                  : "bg-green-500 text-white"
               }`}
             >
               <ReactMarkdown>{message.text}</ReactMarkdown>
